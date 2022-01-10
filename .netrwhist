@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/najam/go/src/github.com/najamsk/myleetcode/Go/2.twosum'
+let g:netrw_dirhist_8='/home/najam/go/src/github.com/najamsk/myleetcode/Go'
+let g:netrw_dirhist_7='/home/najam/go/src/github.com/najamsk/myleetcode'
+let g:netrw_dirhist_6='/home/najam/go/src/github.com/najamsk/myleetcode/.vscode'
+let g:netrw_dirhist_5='/home/najam/go/src/github.com/najamsk/myleetcode/.idea'
+let g:netrw_dirhist_4='/home/najam/go/src/github.com/najamsk/myleetcode'
+let g:netrw_dirhist_3='/home/najam/projects/golang/validator'
+let g:netrw_dirhist_2='/home/najam/projects/golang/todo'
+let g:netrw_dirhist_1='/home/najam/go/src/github.com/najamsk/myleetcode/Go/13.factorial'
+let g:netrw_dirhist_0='/home/najam/go/src/github.com/najamsk/myleetcode/Go'
