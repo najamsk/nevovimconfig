@@ -33,9 +33,24 @@ nnoremap <lader>cd :lcd %:h<CR>e
 map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 
 
+" Telescope bindings
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr> 
+
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+
 " netrw
 
 nnoremap - :Explore<CR>
+nnoremap <leader>rf :MRf<CR>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
@@ -49,6 +64,12 @@ call plug#begin()
 Plug 'vim-airline/vim-airline' " https://github.com/vim-airline/vim-airline
 Plug 'ctrlpvim/ctrlp.vim'      " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ryanoasis/vim-devicons'  " https://github.com/ryanoasis/vim-devicons + https://github.com/ryanoasis/nerd-fonts/
+Plug 'jiangmiao/auto-pairs'
+Plug 'yegappan/mru'
+Plug 'yegappan/mru'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 Plug 'tpope/vim-commentary'    " https://github.com/tpope/vim-commentary
 Plug 'airblade/vim-gitgutter'  " https://github.com/airblade/vim-gitgutter
 Plug 'mkitt/tabline.vim'       " https://github.com/mkitt/tabline.vim
@@ -63,6 +84,28 @@ Plug 'NLKNguyen/papercolor-theme' " https://github.com/NLKNguyen/papercolor-them
 call plug#end()
 
 "-- plug END
+
+
+
+" Tab mappings.
+map <leader>tt :tabnew<cr>
+map <leader>te :tabedit
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
+map <leader>tf :tabfirst<cr>
+map <leader>tl :tablast<cr>
+map <leader>tm :tabmove
+
+nnoremap <Up>    :resize -2<CR>
+nnoremap <Down>  :resize +2<CR>
+nnoremap <Left>  :vertical resize -2<CR>
+nnoremap <Right> :vertical resize +2<CR>
+
+" :nnoremap <C-g> :NERDTreeToggle<CR>
+
+
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
