@@ -1,4 +1,4 @@
-let apleader = ","
+let mapleader = ","
 
 filetype on
 filetype indent on
@@ -21,6 +21,8 @@ set clipboard=unnamed
 set noscrollbind
 set wildmenu
 set autochdir
+set cursorline
+set pastetoggle=<Leader>a "\a before pasting to preserve indentation
 
 hi Search cterm=NONE ctermfg=black ctermbg=red
 
@@ -46,6 +48,10 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+"Open my vimrc file in vertical tab whenever I pressed ,vm
+map <leader>vm :vsp $MYVIMRC<CR>
+"Save my current file with ,w instead of typing :w every time.
+nnoremap <leader>w :w!<CR>
 
 " netrw
 
@@ -78,6 +84,9 @@ Plug 'mkitt/tabline.vim'       " https://github.com/mkitt/tabline.vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " https://github.com/fatih/vim-go
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " https://github.com/neoclide/coc.nvim
 Plug 'SirVer/ultisnips'                             " https://github.com/sirver/UltiSnips
+
+"> FrontEnd
+Plug 'mattn/emmet-vim'
 
 "> Theme
 Plug 'NLKNguyen/papercolor-theme' " https://github.com/NLKNguyen/papercolor-theme
