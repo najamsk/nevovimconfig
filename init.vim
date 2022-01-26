@@ -90,6 +90,7 @@ Plug 'mattn/emmet-vim'
 
 "> Theme
 Plug 'NLKNguyen/papercolor-theme' " https://github.com/NLKNguyen/papercolor-theme
+Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
 "-- plug END
