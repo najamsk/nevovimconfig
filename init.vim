@@ -22,6 +22,7 @@ set noscrollbind
 set wildmenu
 set autochdir
 set cursorline
+set autoread
 set pastetoggle=<Leader>a "\a before pasting to preserve indentation
 
 hi Search cterm=NONE ctermfg=black ctermbg=red
@@ -70,13 +71,15 @@ call plug#begin()
 Plug 'vim-airline/vim-airline' " https://github.com/vim-airline/vim-airline
 Plug 'ctrlpvim/ctrlp.vim'      " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ryanoasis/vim-devicons'  " https://github.com/ryanoasis/vim-devicons + https://github.com/ryanoasis/nerd-fonts/
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yegappan/mru'
-Plug 'yegappan/mru'
+"Plug 'yegappan/mru'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'tpope/vim-commentary'    " https://github.com/tpope/vim-commentary
+Plug 'tpope/vim-fugitive' 
 Plug 'airblade/vim-gitgutter'  " https://github.com/airblade/vim-gitgutter
 Plug 'mkitt/tabline.vim'       " https://github.com/mkitt/tabline.vim
 
@@ -132,5 +135,4 @@ set updatetime=500
 set termguicolors
 set background=dark
 colorscheme PaperColor
-
 "-- papercolor-theme ENDm
