@@ -93,7 +93,11 @@ Plug 'mattn/emmet-vim'
 
 "> Theme
 Plug 'NLKNguyen/papercolor-theme' " https://github.com/NLKNguyen/papercolor-theme
+Plug 'sheerun/vim-polyglot'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'EdenEast/nightfox.nvim'
+Plug 'mcchrish/zenbones.nvim'
+Plug 'sickill/vim-monokai'
 call plug#end()
 
 "-- plug END
@@ -134,5 +138,12 @@ set updatetime=500
 
 set termguicolors
 set background=dark
-colorscheme PaperColor
+"colorscheme PaperColor
 "-- papercolor-theme ENDm
+if exists('+termguicolors')
+      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      set termguicolors
+    endif
+
+colorscheme spaceduck
