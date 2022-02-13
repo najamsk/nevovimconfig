@@ -96,8 +96,11 @@ Plug 'NLKNguyen/papercolor-theme' " https://github.com/NLKNguyen/papercolor-them
 Plug 'sheerun/vim-polyglot'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'EdenEast/nightfox.nvim'
-Plug 'mcchrish/zenbones.nvim'
 Plug 'sickill/vim-monokai'
+Plug 'mhartington/oceanic-next'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'marko-cerovac/material.nvim'
+Plug 'sainnhe/sonokai'
 call plug#end()
 
 "-- plug END
@@ -146,4 +149,8 @@ if exists('+termguicolors')
       set termguicolors
     endif
 
-colorscheme spaceduck
+"colorscheme PaperColor
+"colorscheme spaceduck
+"colorscheme OceanicNext
+colorscheme tokyonight
+"colorscheme material
